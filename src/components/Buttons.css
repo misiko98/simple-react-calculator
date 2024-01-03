@@ -1,0 +1,41 @@
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* margin: 2rem 0; */
+}
+
+.buttons li {
+  width: calc(25% - 10px);
+  margin-bottom: 1rem;
+}
+button {
+  width: 100%;
+  background-color: #4caf50;
+  border: none;
+  padding: 20px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button.operator {
+  background-color: #f7941e;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.clear {
+  background-color: #f44336;
+}
+
+.calculate {
+  background-color: #2196f3;
+}
