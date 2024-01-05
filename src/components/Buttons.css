@@ -24,7 +24,7 @@ button {
   border-radius: 5px;
 }
 
-button.operator {
+button#operator {
   background-color: #f7941e;
 }
 
@@ -32,10 +32,10 @@ button:hover {
   background-color: #45a049;
 }
 
-.clear {
+#clear {
   background-color: #f44336;
 }
 
-.calculate {
+#calculate {
   background-color: #2196f3;
 }

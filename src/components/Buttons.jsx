@@ -1,20 +1,28 @@
 import './Buttons.css';
 
-const Buttons = ({ items, operators }) => {
-  const getButtonClassName = (buttonContent) => {
-    let className;
-    if (operators.includes(buttonContent)) className = 'operator';
-    if (buttonContent === 'C') className = 'clear';
-    if (buttonContent === '=') className = 'calculate';
+const Buttons = ({ operators, items, onSelectBtn }) => {
+  const getBtnId = (buttonContent) => {
+    if (operators.includes(buttonContent)) return 'operator';
+    if (buttonContent === 'C') return 'clear';
+    if (buttonContent === '=') return 'calculate';
+    return 'default';
+  };
 
-    return className;
+  const handleBtnClick = (e) => {
+    onSelectBtn(e.target.value);
   };
 
   return (
     <ul className="buttons">
-      {items.map((item) => (
-        <li key="item">
-          <button className={getButtonClassName(item)}>{item}</button>
+      {items.map((btnContent, index) => (
+        <li key={index}>
+          <button
+            id={getBtnId(btnContent)}
+            onClick={handleBtnClick}
+            value={btnContent}
+          >
+            {btnContent}
+          </button>
         </li>
       ))}
     </ul>
